@@ -92,21 +92,22 @@ loadImages((images) => {
   document.getElementById("block").onclick = () => queuedAnimation.push("block");
 
   document.addEventListener("keyup", (event) => {
-    const key = event.key;
-    switch (event.key) {
-      case "a" || "A":
+    const key = event.key.toLowerCase();
+    console.log(key)
+    switch (key) {
+      case "a":
         queuedAnimation.push("backward");
         break;
-      case "d" || "D":
+      case "d":
         queuedAnimation.push("forward");
         break;
-      case "w" || "W":
+      case "w":
         queuedAnimation.push("punch");
         break;
-      case "s" || "S":
+      case "s":
         queuedAnimation.push("kick");
         break;
-      case "e" || "E":
+      case "e":
         queuedAnimation.push("block");
         break;
     }
